@@ -1,0 +1,47 @@
+.page1{
+  padding-top: 30vh;
+  background-color: #0F6292;
+}
+
+.page2{
+  padding-top: 30vh;
+  background-color: #0F6292;
+}
+
+.page3{
+  padding-top: 30vh;
+  background-color: #0F6292;
+}
+
+section{
+  height: 50vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+div.gallery {
+  margin: 100px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  transition: 0.5s;
+}
+
+div.gallery:hover {
+  transform: scale(1.1); 
+  
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
