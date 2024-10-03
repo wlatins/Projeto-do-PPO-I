@@ -96,7 +96,7 @@ div.gallery {
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	background-color: #0087ca;
+	background-color: 	black;
 	transform-origin: bottom right;
 	transition: transform 0.25s ease-out;
   }
@@ -160,9 +160,12 @@ p {
 	padding-right: 100px;
 	font-family: "Poppins", sans-serif;
 }
-
-.img {
+/* .img {
 	position: absolute;
 	background-image: url("2.jpg");
 	background-size: cover;
-}
+
+	width: 50vh;
+	height: 50vh;
+	z-index: 999999999999999999;
+} */
