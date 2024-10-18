@@ -1,20 +1,23 @@
 <?php
 error_reporting(E_ALL ^ E_WARNING);
 session_start();
+$url = 'http://localhost/trabalho/';
+require_once('inc/conexao.php');
+require_once('classes/pessoa.php');
 
-if (!isset($_SESSION['logado'])) {
-    $_SESSION['logado'] = false;
- }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $cliente = new Pessoa($conn);
 
- if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['register'])) {
-       $_SESSION['nome'] = $_POST['nome_cliente'];
-       $_SESSION['email'] = $_POST['email_cliente'];
-       $_SESSION['senha'] = $_POST['senha_cliente'];
-       $_SESSION['logado'] = true;
-       header('Location: home.php');
-    }    
- }
+    $cliente->setnome_pessoa($_POST['nome_pessoa']);
+    $cliente->setemail_pessoa($_POST['email_pessoa']);
+    $cliente->setcpf_pessoa($_POST['cpf_pessoa']);
+    $cliente->setsenha_pessoa($_POST['senha_pessoa']);
+    $cliente->settelefone_pessoa($_POST['telefone_pessoa']);
+    $cliente->insert();
+}
+if ($_SESSION['logado']) {
+    header('location: index.php');
+}
 
 ?>
 
@@ -79,7 +82,8 @@ if (!isset($_SESSION['logado'])) {
                 </div>
                 <div class="entrar">
                     <a href="index.html" style="text-decoration: none; color: black;">
-                        <button class="botao" style="text-decoration: none; color: black;" name="register">Criar conta</button>
+                        <button class="botao" style="text-decoration: none; color: black;" name="register">Criar
+                            conta</button>
                     </a>
                 </div>
             </div>

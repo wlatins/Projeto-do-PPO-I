@@ -1,17 +1,20 @@
 <?php
 error_reporting(E_ALL ^ E_WARNING);
 session_start();
+$url = 'http://localhost/trabalho/';
+require_once('inc/conexao.php');
+require_once('classes/pessoa.php');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {}
-      if (isset($_POST['login'])) {
-         if($_SESSION['email_cliente'] === $_POST['email_cliente']) {
-            if($_SESSION['senha_cliente'] === $_POST['senha_cliente']) {
-               header('Location: home.php');
-            }  
-         }
-}
-$_SESSION['email'];
-$_SESSION['senha'];
+if ($_SESSION['logado']) {
+    header('location: index.php');
+ }
+ 
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $cliente = new Pessoa($conn);
+    $cliente->setemail_pessoa($_POST['email_pessoa']);
+    $cliente->setsenha_pessoa($_POST['cliente_pessoa']);
+    $cliente->logar();
+ }
 
 ?>
 <!DOCTYPE html>
