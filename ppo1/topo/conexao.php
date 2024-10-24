@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $password = "1234";
-$dbname = "ifc_trabalho";
+$dbname = "fishing_database";
 
 try {
     // Criando a conexão usando PDO
