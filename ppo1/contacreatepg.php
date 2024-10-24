@@ -2,7 +2,7 @@
 error_reporting(E_ALL ^ E_WARNING);
 session_start();
 $url = 'http://localhost/trabalho/';
-require_once('inc/conexao.php');
+require_once('topo/conexao.php');
 require_once('classes/pessoa.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
