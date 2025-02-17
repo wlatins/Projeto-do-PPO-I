@@ -6,6 +6,7 @@ require_once('topo/conexao.php');
 require_once('classes/pessoa.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    var_dump($conn);
     $cliente = new Pessoa($conn);
 
     $cliente->setnome_pessoa($_POST['nome_pessoa']);
@@ -14,9 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cliente->setsenha_pessoa($_POST['senha_pessoa']);
     $cliente->settelefone_pessoa($_POST['telefone_pessoa']);
     $cliente->insert();
+    $_SESSION['logado'] = true;
 }
 if ($_SESSION['logado']) {
     header('location: index.php');
+    $_SESSION['logado'] = false;
 }
 
 ?>
@@ -70,21 +73,27 @@ if ($_SESSION['logado']) {
         <form action="" method="post" name="form" enctype="multipart/form-data">
             <div class="login">
                 <div class="usuario">
-                    <input type="text" name="nome" placeholder="Nome de usuário " autofocus>
+                    <input type="text" name="nome_pessoa" placeholder="Nome de usuário " autofocus>
                 </div>
 
                 <div class="email">
-                    <input type="text" name="email" placeholder="Informe seu email " autofocus>
+                    <input type="text" name="email_pessoa" placeholder="Informe seu email " autofocus>
+                </div>
+
+                <div class="cpf">
+                    <input type="text" name="cpf_pessoa" placeholder="Informe seu CPF " autofocus>
                 </div>
 
                 <div class="senha">
-                    <input type="password" name="senha" placeholder="Sua senha " autofocus>
+                    <input type="password" name="senha_pessoa" placeholder="Sua senha " autofocus>
                 </div>
+
+                <div class="telefone">
+                    <input type="text" name="telefone_pessoa" placeholder="Seu telefone " autofocus>
+                </div>
+
                 <div class="entrar">
-                    <a href="index.html" style="text-decoration: none; color: black;">
-                        <button class="botao" style="text-decoration: none; color: black;" name="register">Criar
-                            conta</button>
-                    </a>
+                    <button class="botao" name="register">Criar conta</button>
                 </div>
             </div>
         </form>

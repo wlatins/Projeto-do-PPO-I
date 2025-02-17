@@ -2,7 +2,7 @@
 error_reporting(E_ALL ^ E_WARNING);
 session_start();
 $url = 'http://localhost/trabalho/';
-require_once('inc/conexao.php');
+require_once('topo/conexao.php');
 require_once('classes/pessoa.php');
 
 if ($_SESSION['logado']) {
@@ -12,7 +12,7 @@ if ($_SESSION['logado']) {
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cliente = new Pessoa($conn);
     $cliente->setemail_pessoa($_POST['email_pessoa']);
-    $cliente->setsenha_pessoa($_POST['cliente_pessoa']);
+    $cliente->setsenha_pessoa($_POST['senha_pessoa']);
     $cliente->logar();
  }
 
@@ -64,10 +64,10 @@ if ($_SESSION['logado']) {
         <form action="" method="post" name="form" enctype="multipart/form-data">
             <div class="login">
                 <div class="usuario">
-                    <input type="text" name="nome" placeholder="Nome de usuário " autofocus>
+                    <input type="text" name="email_pessoa" placeholder="Email" autofocus>
                 </div>
                 <div class="senha">
-                    <input type="password" name="senha" placeholder="Sua senha" autofocus>
+                    <input type="password" name="senha_pessoa" placeholder="Sua senha" autofocus>
                 </div>
                 <div class="entrar">
                     <a href="index.html">

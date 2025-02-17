@@ -1,5 +1,5 @@
-create database fishing;
-use fishing;
+create database fishing_database;
+use fishing_database;
 
 create table projeto (
 id_projeto int not null auto_increment,
