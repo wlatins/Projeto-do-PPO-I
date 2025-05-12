@@ -2,7 +2,7 @@
 // Configurações de conexão ao banco de dados MySQL
 $host = "localhost";
 $user = "root";
-$password = "Picles8585!";
+$password = "1234";
 $dbname = "fishing_database";
 
 try {

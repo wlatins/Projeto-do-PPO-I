@@ -75,8 +75,7 @@ class Pessoa
                 echo "Pessoa física inserida com sucesso!<br>";
             } else {
                 echo "Erro ao inserir Pessoa física!<br>";
-            }
-        } catch (PDOException $e) {
+            } 
             echo "Erro: " . $e->getMessage();
         }
     }
