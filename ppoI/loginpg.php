@@ -19,8 +19,8 @@ require_once('classes/empresa.php');
 
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $empresa = new Empresa($conn);
-    $empresa->setemail_empresa($_POST['email_pessoa']);
-    $empresa->setsenha_pessoa($_POST['senha_pessoa']);
+    $empresa->setemail_empresa($_POST['email_empresa']);
+    $empresa->setsenha_empresa($_POST['senha_empresa']);
     $empresa->logar();
  }
 
