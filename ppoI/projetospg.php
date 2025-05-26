@@ -29,32 +29,35 @@
 
   <!-- links de arquivos -->
 
-  <link rel='stylesheet' type='text/css' media='screen' href='/css/projetospg.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='/css/principal.css'>
-  <script async defer src='/js/home.js'></script>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/principal.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/projetospg.css'>
+  <script async defer src='js/home.js'></script>
 
 </head>
 
 <body>
   <header>
-    <nav>
-      <ul>
-        <li style="list-style: none;" class="nav-item"><a href="index.html" style="text-decoration: none;">Home</a></li>
-        <li style="list-style: none;" class="nav-item"><a href="quem_somos.html" style="text-decoration: none;">Quem
-            Somos?</a></li>
-      </ul>
-    </nav>
+  <nav>
+				<ul>
+					<li style="list-style: none;" class="nav-item"><a href="index.php"
+							style="text-decoration: none;">Home</a></li>
+					<li style="list-style: none;" class="nav-item"><a href="quem_somos.php"
+							style="text-decoration: none;">Quem Somos?</a></li>
+					<li style="list-style: none;" class="nav-item"><a href="projetospg.php"
+							style="text-decoration: none;">Projetos</a></li>
+				</ul>
+			</nav>
 
     <div class="barra_de_pesquisa">
       <input placeholder="Pesquise aqui" class="texto_da_pesquisa">
-      <img class="icone" src="/imagens/lupa.png">
+      <img class="icone" src="imagens/lupa.png">
     </div>
   </header>
 
   <section class="page1">
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99)99999-9999</div>
         </div>
@@ -64,7 +67,7 @@
   
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -74,7 +77,7 @@
   
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -84,7 +87,7 @@
   
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -95,7 +98,7 @@
   <section class="page2">
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -105,7 +108,7 @@
   
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -115,7 +118,7 @@
   
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -125,7 +128,7 @@
   
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -136,7 +139,7 @@
   <section class="page3">
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -146,7 +149,7 @@
   
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -156,7 +159,7 @@
   
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
@@ -166,7 +169,7 @@
   
     <div class="gallery">
       <div class="image-wrapper">
-        <img src="/imagens/user.png">
+        <img src="imagens/user.png">
         <div class="overlay">
           <div class="text">Entre em contato com o autor do projeto no número (99) 9 9999-9999</div>
         </div>
