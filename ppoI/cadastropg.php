@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $cliente->setcpf_pessoa($_POST['cpf_pessoa']);
         $cliente->setsenha_pessoa($_POST['senha_pessoa']);
         $cliente->settelefone_pessoa($_POST['telefone_pessoa']);
+
         $cliente->insert();
     } elseif ($tipo == "empresa") {
         $empresa = new Empresa($conn);
@@ -29,15 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $_SESSION['logado'] = true;
 }
-
-if ($_SESSION['logado']) {
-    header('location: index.php');
-    $_SESSION['logado'] = false;
-    exit();
-}
-
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -63,6 +56,10 @@ if ($_SESSION['logado']) {
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <!--bootstrap -->
+	<link rel="stylesheet" href="./bootstrap-5.3.6-dist/css/bootstrap.css">
+	<script async defer src='./bootstrap-5.3.6-dist/js/bootstrap.js'></script>
 
     <link rel="stylesheet" href="css/principal.css">
     <link rel='stylesheet' type='text/css' media='screen' href='css/cadastropg.css'>
