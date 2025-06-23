@@ -6,7 +6,6 @@ tabButtons.forEach(button => {
     button.addEventListener('click', () => {
         tabButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-
         if (button.dataset.target === 'pessoa-form') {
             pessoaForm.style.display = 'block';
             empresaForm.style.display = 'none';

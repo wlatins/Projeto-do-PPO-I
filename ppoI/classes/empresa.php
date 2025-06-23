@@ -71,7 +71,9 @@ class Empresa
             $stmt->bindParam(':telefone_empresa', $this->telefone_empresa);
 
             if ($stmt->execute()) {
-                echo "Empresa inserida com sucesso!<br>";
+                // echo "Empresa inserida com sucesso!<br>";
+                $_SESSION['logado'] = true;
+                header('location:index.php');
             } else {
                 echo "Erro ao inserir Empresa!<br>";
             }
@@ -93,7 +95,7 @@ class Empresa
 
         if (count($result) > 0) {
             $_SESSION['logado'] = true;
-            // header('location: index.php');
+            header('location: index.php');
         } else {
             echo "Email ou Senha incorreto!";
         }

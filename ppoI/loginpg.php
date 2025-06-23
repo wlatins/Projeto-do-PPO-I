@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL ^ E_WARNING);
 session_start();
-$url = 'http://localhost/trabalho/';
+$url = 'http://localhost/ppoI/';
 require_once('topo/conexao.php');
 require_once('classes/pessoa.php');
 require_once('classes/empresa.php');

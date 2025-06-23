@@ -71,7 +71,9 @@ class Pessoa
             $stmt->bindParam(':telefone_pessoa', $this->telefone_pessoa);
 
             if ($stmt->execute()) {
-                echo "Pessoa inserida com sucesso!<br>";
+                // echo "Pessoa inserida com sucesso!<br>";
+                $_SESSION['logado'] = true;
+                header('location:index.php');
             } else {
                 echo "Erro ao inserir Pessoa!<br>";
             }

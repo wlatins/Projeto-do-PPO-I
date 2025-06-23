@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL ^ E_WARNING);
 session_start();
-$url = 'http://localhost/trabalho/';
+$url = 'http://localhost/ppoI/';
 require_once('topo/conexao.php');
 require_once('classes/pessoa.php');
 require_once('classes/empresa.php');
@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $cliente->setcpf_pessoa($_POST['cpf_pessoa']);
         $cliente->setsenha_pessoa($_POST['senha_pessoa']);
         $cliente->settelefone_pessoa($_POST['telefone_pessoa']);
-
         $cliente->insert();
+        exit();
     } elseif ($tipo == "empresa") {
         $empresa = new Empresa($conn);
         $empresa->setnome_empresa($_POST['nome_empresa']);
@@ -26,9 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $empresa->setsenha_empresa($_POST['senha_empresa']);
         $empresa->settelefone_empresa($_POST['telefone_empresa']);
         $empresa->insert();
+        exit();
     }
-    
-    $_SESSION['logado'] = true;
 }
 ?>
 <!DOCTYPE html>
@@ -75,12 +74,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <section class="page1">
         <div class="tabs">
-            <button class="tab-btn active" data-target="pessoa-form">Pessoa</button>
+            <button class="tab-btn .active" data-target="pessoa-form">Pessoa</button>
             <button class="tab-btn" data-target="empresa-form">Empresa</button>
         </div>
 
         <!-- Formulário Pessoa -->
-        <form id="pessoa-form" action="" method="post" class="login">
+        <form id="pessoa-form" action="" method="post" class="login" style="display: none;">
             <div class="usuario">
                 <input type="text" name="nome_pessoa" placeholder="Nome de usuário" autofocus>
             </div>
@@ -101,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
 
         <!-- Formulário Empresa -->
-        <form id="empresa-form" action="" method="post" class="login">
+        <form id="empresa-form" action="" method="post" class="login" style="display: none;">
             <div class="usuario">
                 <input type="text" name="nome_empresa" placeholder="Nome da Empresa" autofocus>
             </div>
