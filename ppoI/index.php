@@ -41,7 +41,7 @@ require_once('classes/empresa.php');
 
 	<!--bootstrap -->
 	<link rel="stylesheet" href="./bootstrap-5.3.6-dist/css/bootstrap.css">
-	<script async defer src='./bootstrap-5.3.6-dist/js/bootstrap.js'></script>
+	<script async defer src='./bootstrap-5.3.6-dist/js/bootstrap.bundle.js'></script>
 
 	<!--custom -->
 	<link rel="stylesheet" href="css/principal.css">
@@ -49,11 +49,6 @@ require_once('classes/empresa.php');
 	<script async defer src='js/home.js'></script>
 
 </head>
-<!-- <?php
-		include("test.php");
-		?> -->
-
-<body>
 	<header>
 		<?php
 			include("nav.php");

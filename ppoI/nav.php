@@ -17,7 +17,7 @@
            </button>
            <ul class="dropdown-menu">
                <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
-               <li><a class="dropdown-item" href="home.php">Deslogar</a></li>
+               <li><a class="dropdown-item" href="logout.php" id="deslogar">Deslogar</a></li>
            </ul>
        </div>
    <?php
