@@ -84,26 +84,29 @@ class Projeto
     }
 
     public function listar($url) {
-    $sql = "SELECT * FROM projeto";
-    $stmt = $this->conn->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $retorno = '';
+        $sql = "SELECT * FROM projeto";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $retorno = '';
+    
+        if (count($result) > 0) {
+            foreach ($result as $row) {
 
-    if (count($result) > 0) {
-        foreach ($result as $row) {
-            $retorno .= '<div class="gallery">
-                            <div class="image-wrapper">
-                                <img src="' . $url . $row['img_projeto'] . '">
-                            </div>
-                            <div class="desc">' . $row['titulo_projeto'] . '</div>
-                        </div>';
+                $imgSrc = rtrim($url, '/') . '/' . ltrim($row['img_projeto'], '/');
+    
+                $retorno .= '<div class="gallery">
+                                <div class="image-wrapper">
+                                    <img src="' . $imgSrc . '" alt="Imagem do projeto">
+                                </div>
+                                <div class="desc">' . htmlspecialchars($row['titulo_projeto']) . '</div>
+                            </div>';
+            }
+            return $retorno;
+        } else {
+            return "0 resultados<br>";
         }
-        return $retorno;
-    } else {
-        echo "0 resultados<br>";
     }
-}
 
 }
 ?>
